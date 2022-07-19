@@ -28,6 +28,7 @@
 #### hutool是一个小而全的Java工具类库，通过静态方法封装，降低相关API的学习成本
 
 > https://gitee.com/dromara/hutool
+
 ```xml
 
 <dependency>
@@ -36,3 +37,27 @@
     <version>5.8.3</version>
 </dependency>
 ```
+
+#### post 请求示例
+
+```text
+curl -X POST -H  "Accept:*/*" -H  "Content-Type:application/json" -d "{\"id\":\"12\",\"name\":\"2342324\"}" "http://localhost:9001/api/seller/save"
+```
+
+#### 请求响应
+
+```json
+{
+  "code": 200,
+  "message": "请求成功！",
+  "data": {
+    "id": "12",
+    "name": "2342324"
+  },
+  "resultMap": {}
+}
+```
+
+#### knife4j api url
+
+> http://localhost:9001/doc.html#/home
