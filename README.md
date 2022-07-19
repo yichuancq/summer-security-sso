@@ -15,7 +15,7 @@
 ```
 
 #### knife4j swagger 升级版接口文档
-
+> https://doc.xiaominfo.com/
 ```xml
 
 <dependency>
@@ -27,6 +27,7 @@
 
 #### hutool是一个小而全的Java工具类库，通过静态方法封装，降低相关API的学习成本
 
+> https://gitee.com/dromara/hutool
 ```xml
 
 <dependency>
