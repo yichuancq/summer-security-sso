@@ -10,13 +10,21 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
+        <!--网关服务-->
         <module>summer-gateway-server</module>
+        <!--后端权限服务-->
         <module>summer-oath-server</module>
+        <!--公共类-->
         <module>summer-common</module>
+        <!--spring admin管理-->
         <module>summer-admin-server</module>
+        <!--资源服务-->
         <module>summer-resource-server</module>
+        <!--销售服务-->
         <module>summer-seller-server</module>
+        <!--订单服务-->
         <module>summer-bill-server</module>
+        <!--日志切面-->
         <module>summer-log</module>
     </modules>
 
