@@ -1,6 +1,6 @@
 # summer-security-sso
 
-一个简洁而易于使用的sso权限框架，方便项目快速上手
+一个简洁而易于使用的sso权限框架，方便项目快速上手。jwt权限认证，redis缓存，nacos注册中心。
 
 #### Spring Boot 父依赖
 
