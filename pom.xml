@@ -17,6 +17,7 @@
         <module>summer-resource-server</module>
         <module>summer-seller-server</module>
         <module>summer-bill-server</module>
+        <module>summer-log</module>
     </modules>
 
     <properties>
@@ -38,6 +39,12 @@
             <version>1.18.24</version>
             <optional>true</optional>
             <scope>provided</scope>
+        </dependency>
+
+        <!--spring切面aop依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
         <dependency>
