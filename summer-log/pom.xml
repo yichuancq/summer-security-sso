@@ -17,7 +17,6 @@
     </properties>
 
     <dependencies>
-
         <!--summer-common-->
         <dependency>
             <groupId>org.example</groupId>
@@ -45,7 +44,6 @@
             <artifactId>spring-web</artifactId>
         </dependency>
     </dependencies>
-
     <build>
         <defaultGoal>compile</defaultGoal>
         <plugins>

@@ -1,5 +1,6 @@
 package com.summer.controller;
 
+import com.summer.annotation.SystemLog;
 import com.summer.common.exception.ResultCode;
 import com.summer.common.response.ResultData;
 import com.summer.vo.RequestParams;
@@ -17,8 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class SellerController {
 
     /**
+     * save
+     *
      * @param requestParams
+     * @return
      */
+    @SystemLog(value = "save")
     @PostMapping(value = "save")
     public ResultData<?> test(@RequestBody RequestParams requestParams) {
         log.info("test->requestParams:{}", requestParams);
