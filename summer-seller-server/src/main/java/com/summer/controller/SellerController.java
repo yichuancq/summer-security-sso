@@ -25,8 +25,49 @@ public class SellerController {
      */
     @SystemLog(value = "save")
     @PostMapping(value = "save")
-    public ResultData<?> test(@RequestBody RequestParams requestParams) {
+    public ResultData<?> save(@RequestBody RequestParams requestParams) {
         log.info("test->requestParams:{}", requestParams);
+        return new ResultData<>(ResultCode.SUCCESS, requestParams);
+    }
+
+    /**
+     * delete
+     *
+     * @param requestParams
+     * @return
+     */
+    @SystemLog(value = "delete")
+    @PostMapping(value = "delete")
+    public ResultData<?> delete(@RequestBody RequestParams requestParams) {
+        log.info("delete->requestParams:{}", requestParams);
+        return new ResultData<>(ResultCode.SUCCESS, requestParams);
+    }
+
+
+    /**
+     * update
+     *
+     * @param requestParams
+     * @return
+     */
+    @SystemLog(value = "update")
+    @PostMapping(value = "update")
+    public ResultData<?> update(@RequestBody RequestParams requestParams) {
+        log.info("update->requestParams:{}", requestParams);
+        return new ResultData<>(ResultCode.SUCCESS, requestParams);
+    }
+
+
+    /**
+     * info
+     *
+     * @param requestParams
+     * @return
+     */
+    @SystemLog(value = "info")
+    @PostMapping(value = "info")
+    public ResultData<?> info(@RequestBody RequestParams requestParams) {
+        log.info("info->requestParams:{}", requestParams);
         return new ResultData<>(ResultCode.SUCCESS, requestParams);
     }
 }
