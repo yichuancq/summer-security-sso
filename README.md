@@ -61,3 +61,32 @@ curl -X POST -H  "Accept:*/*" -H  "Content-Type:application/json" -d "{\"id\":\"
 #### knife4j api url
 
 > http://localhost:9001/doc.html#/home
+
+#### 自定义日志注解，@Aspect 自定义切面
+
+```java
+
+@Documented
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface SystemLog {
+    String value() default "";
+
+}
+```
+
+#### controller使用日志
+
+```java
+/**
+ * save
+ * @param requestParams
+ * @return
+ */
+@SystemLog(value = "save")
+@PostMapping(value = "save")
+public ResultData<?> save(@RequestBody RequestParams requestParams){
+        log.info("test->requestParams:{}",requestParams);
+        return new ResultData<>(ResultCode.SUCCESS,requestParams);
+        }
+```
