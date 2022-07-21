@@ -2,6 +2,19 @@
 
 一个简洁而易于使用的sso权限框架，方便项目快速上手。jwt权限认证，redis缓存，nacos注册中心。
 
+#### 系统模块
+
+| 模块名称       | 功能   | 备注             |
+|:-----------------------|:---------------|:---------------|
+| summer-gateway-server  | 网关服务           | 网关实现权限认证，流量监控等 |
+| summer-oath-server     | 后端权限服务         | 后端权限服务         |
+| summer-common          | 公共类            | 公共类            |
+| summer-admin-server    | spring admin管理 | 方便运行参数查看       |
+| summer-resource-server | 资源服务           | 文件上传、下载        |
+| summer-seller-server   | 销售服务           | 功能子模块          |
+| summer-bill-server     | 订单服务            | 功能子模块          |
+| summer-log             | 日志切面            | 自定义注解日志记录      |
+
 #### Spring Boot 父依赖
 
 ```xml
