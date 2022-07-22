@@ -103,3 +103,26 @@ public ResultData<?> save(@RequestBody RequestParams requestParams){
         return new ResultData<>(ResultCode.SUCCESS,requestParams);
         }
 ```
+
+#### 登录获取token
+
+GET请求参数
+
+```text
+curl -X GET -H  "Accept:*/*" -H  "Content-Type:application/x-www-form-urlencoded" "http://localhost:9010/admin/login?passWord=admin&userName=admin"
+```
+
+返回值
+
+```json
+{
+  "code": 200,
+  "message": "请求成功！",
+  "data": {
+    "userId": 1,
+    "userName": "admin",
+    "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIxIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE2NTg0NjI2MTUsImlzcyI6InN1bW1lciIsImV4cCI6MTY1ODU0OTAxNSwiYXV0aG9yaXRpZXMiOiJbe1wiYXV0aG9yaXR5XCI6XCJST0xFX0FETUlOXCJ9XSJ9.MRpawWEftLZ0w97-FOCRDcsIX_7ySVGMRtUh-D0tgNkJdyEG7zEVQBsMF2tXFDRGhNtpqQZRifa2fT7rgSKEXg"
+  },
+  "resultMap": {}
+}
+```
