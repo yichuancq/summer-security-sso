@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.summer.oath.mapper.SysUserMapper">
+
+    <!-- 根据用户ID查询角色 -->
+    <select id="findRoleByUserId" resultType="com.summer.oath.domain.SysRole" parameterType="integer">
+        SELECT
+        r.*
+        FROM
+        sys_role r
+        LEFT JOIN sys_user_role ur ON ur.role_id = r.role_id
+        WHERE
+        ur.user_id = #{userId}
+    </select>
+
+    <!-- 根据用户ID查询权限 -->
+    <select id="findAuthByUserId" resultType="com.summer.oath.domain.SysAuth" parameterType="integer">
+        SELECT
+        a.*
+        FROM
+        sys_auth a
+        LEFT JOIN sys_role_auth ra ON ra.auth_id = a.auth_id
+        LEFT JOIN sys_user_role ur ON ur.role_id = ra.role_id
+        WHERE
+        ur.user_id = #{userId}
+    </select>
+
+</mapper>
