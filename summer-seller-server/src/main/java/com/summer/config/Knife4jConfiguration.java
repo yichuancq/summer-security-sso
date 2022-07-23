@@ -9,6 +9,9 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
+/**
+ * @author yichuan
+ */
 @Configuration
 public class Knife4jConfiguration {
     @Bean(value = "seller api 1.0")
